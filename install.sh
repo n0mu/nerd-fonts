@@ -209,7 +209,7 @@ find_command="find $find_dirs \\( \\( -name '*.[o,t]tf' -or -name '*.pcf.gz' \\)
 files=()
 while IFS=  read -r -d $'\0'; do
   files+=("$REPLY")
-done < <(eval "$find_command")
+done
 
 #
 # Remove duplicates (i.e. when both otf and ttf version present)
